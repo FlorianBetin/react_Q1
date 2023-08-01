@@ -1,0 +1,13 @@
+.pokemonCardFigure {
+  background-color: lightgray;
+  height: 10rem;
+  width: 10rem;
+}
+
+.pokemonPic{
+    max-width: 60%;
+}
+
+h1{
+    color: red;
+}
