@@ -7,7 +7,7 @@ const PokemonCards = ({pokemon}) => {
   PokemonCards.propTypes = {
     pokemon: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      imgScr: PropTypes.string.isRequired,
+      imgScr: PropTypes.string,
     }).isRequired,
   }
   console.log(pokemon)
