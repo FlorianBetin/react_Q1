@@ -1,9 +1,16 @@
 import "../styles/pokemoncards.css";
+import PropTypes from "prop-types";
 
 
 
 const PokemonCards = ({pokemon}) => {
-console.log(pokemon)
+  PokemonCards.propTypes = {
+    pokemon: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      imgScr: PropTypes.string.isRequired,
+    }).isRequired,
+  }
+  console.log(pokemon)
 
   return (
     <figure>

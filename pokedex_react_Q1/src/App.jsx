@@ -1,6 +1,7 @@
 import './App.css'
 import PokemonCards from './components/Pokemoncards.jsx'
 
+
 function App() {
 
   const pokemonList = [
@@ -13,6 +14,8 @@ function App() {
       name: "mew",
     },
   ];
+
+
 
   return (
     <div>
