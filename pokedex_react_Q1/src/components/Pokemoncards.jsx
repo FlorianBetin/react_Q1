@@ -1,15 +1,25 @@
-import '../styles/pokemoncards.css';
+import "../styles/pokemoncards.css";
+
+const pokemonList = [
+  {
+    name: "bulbasaur",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    name: "mew",
+  },
+];
 
 const PokemonCards = () => {
-return (
-    
-    <figure className="pokemonCardFigure">
-        <img className="pokemonPic" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Image de Bulbizarre" />
-        <figcaption>
-        Bulbizarre
-        </figcaption>
-    </figure>
-)
-}
+  const pokemon = pokemonList[0];
 
-export default PokemonCards
+  return (
+    <figure>
+      {pokemon.imgSrc ? <img src={pokemon.imgSrc} /> : <p>???</p>}
+      <figcaption>{pokemon.name}</figcaption>
+    </figure>
+  );
+};
+
+export default PokemonCards;
