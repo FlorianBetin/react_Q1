@@ -8,9 +8,12 @@ const PokemonCards = ({pokemon}) => {
       imgScr: PropTypes.string,
     }).isRequired,
   }
-  console.log(pokemon)
+
+  //Alerte transferée ici
+  {pokemon.name ==="pikachu" ? (alert('Pikachuuuu')) : null}
 
   return (
+    
     <figure>
       {pokemon.imgSrc ? <img src={pokemon.imgSrc} /> : <p>???</p>}
       <figcaption>{pokemon.name}</figcaption>

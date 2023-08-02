@@ -1,22 +1,21 @@
 const Navbar = ({pokemonList, pokemonIndex, setPokemonIndex}) => {
 
-    const handleClickNext = () => {
-        setPokemonIndex(pokemonIndex + 1);
-        //solution sans le useEffect
-        pokemonList[pokemonIndex+1].name ==="pikachu" ? (alert('Pikachuuuu')) : null
-      }
-      
-      const handleClickPrevious = () => {
-        setPokemonIndex(pokemonIndex - 1)
-      }
+    const handleClick = (index) => {
+      setPokemonIndex(index);
+      console.log(index, 'index name')
+    }
     
       return (
-        <nav>
-        {pokemonIndex > 0 ? <button onClick={handleClickPrevious}>Previous</button> : null}
-        {pokemonIndex < pokemonList.length - 1 ? <button onClick={handleClickNext}>Next</button> : null}
+        <nav className="navbar">
+      {pokemonList.map((pokemon, index) => (
+        
+        <button className="buttonNavbar" key={index} onClick={() => handleClick(index)}>{pokemon.name}</button>
+      ))
+      }
+
+
         </nav>
       );
 };
 
 export default Navbar;
-
