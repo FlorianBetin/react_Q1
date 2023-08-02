@@ -1,7 +1,9 @@
 const Navbar = ({pokemonList, pokemonIndex, setPokemonIndex}) => {
 
     const handleClickNext = () => {
-        setPokemonIndex(pokemonIndex + 1)
+        setPokemonIndex(pokemonIndex + 1);
+        //solution sans le useEffect
+        pokemonList[pokemonIndex+1].name ==="pikachu" ? (alert('Pikachuuuu')) : null
       }
       
       const handleClickPrevious = () => {

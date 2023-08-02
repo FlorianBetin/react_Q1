@@ -1,8 +1,6 @@
 import "../styles/pokemoncards.css";
 import PropTypes from "prop-types";
 
-
-
 const PokemonCards = ({pokemon}) => {
   PokemonCards.propTypes = {
     pokemon: PropTypes.shape({

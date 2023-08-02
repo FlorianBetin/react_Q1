@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import PokemonCards from './components/Pokemoncards.jsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -34,6 +34,23 @@ function App() {
     ];
 
 const [pokemonIndex, setPokemonIndex] = useState(0);
+
+useEffect(
+  () => {
+    alert('Hello Pemon trainer !')
+  },
+  []
+);
+
+// Solution avec useEffect
+// useEffect(
+//   () => {
+//     console.log(pokemonList[pokemonIndex].name, "here")
+//     {pokemonList[pokemonIndex].name == "pikachu" ? alert('Pikachuuuuu') : null}
+    
+//   },
+//   []
+// )
 
   return (
     <div>
